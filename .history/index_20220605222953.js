@@ -15,8 +15,6 @@ mongoose
   .then(console.log('connected to MongoDB'))
   .catch((error) => console.log(error));
 
-app.use(express.json());
-
 // const storage = multer.diskStorage({
 //   destination: (req, file, cb) => {
 //     cb(null, 'images');
@@ -31,6 +29,8 @@ app.use(express.json());
 // app.post('/api/upload', upload.single('file'), (req, res) => {
 //   res.status(200).json('File has been uploaded');
 // });
+
+app.use(express.json());
 
 app.use('/api/auth', authRoute);
 app.use('/api/user', userRoute);
