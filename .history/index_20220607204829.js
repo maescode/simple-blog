@@ -40,5 +40,5 @@ app.use('/api/categories', categoryRoute);
 app.listen('5082', () => {});
 
 app.use('/', (req, res) => {
-  console.log('port 5082 listening');
+  console.log('port 8081 listening');
 });
